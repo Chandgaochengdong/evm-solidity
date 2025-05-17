@@ -1,0 +1,335 @@
+{
+	"id": "df3f04d3a3e00402ac70020986bd5c55",
+	"_format": "hh-sol-build-info-1",
+	"solcVersion": "0.8.26",
+	"solcLongVersion": "0.8.26+commit.8a97fa7a",
+	"input": {
+		"language": "Solidity",
+		"sources": {
+			"contracts/22_SpecialFun.sol": {
+				"content": "// SPDX-License-Identifier: MIT\npragma solidity >= 0.8.4 <0.9.0;\n\ncontract SpecialFun {\n\n    /**\nblockhash(uint blockNumber) returns (bytes32)： 给定区块的哈希值 - 只对最近的256个区块有效\n\nblobhash(uint index) returns (bytes32)： 与当前交易相关联的第 index 个blob。 此带版本的哈希值是由一个表示版本的单字节（当前为 0x01 ）和紧随其后的KZG证明的SHA256哈希的最后31个字节组成。 （ EIP-4844 ）。\n\nblock.basefee (uint)： 当前区块的基本费用 （ EIP-3198 和 EIP-1559 ）\n\nblock.blobbasefee (uint): 当前区块的blob基础费用（ EIP-7516 和 EIP-4844）\n\nblock.chainid (uint)： 当前链的ID\n\nblock.coinbase (address payable)： 当前区块矿工的地址\n\nblock.difficulty (uint)： 当前区块的难度值（ EVM < Paris ）。对于其他EVM版本，它是 block.prevrandao 的一个废弃的别名，将在下一个重大改变版本中被删除。\n\nblock.gaslimit (uint)： 当前区块的燃料上限\n\nblock.number (uint)： 当前区块的区块号\n\nblock.prevrandao (uint)： 由信标链提供的随机数（ EVM >= Paris ）（见 EIP-4399 ）。\n\nblock.timestamp (uint)： 当前区块的时间戳，自Unix epoch以来的秒数\n\ngasleft() returns (uint256)： 剩余燃料\n\nmsg.data (bytes)： 完整的调用数据\n\nmsg.sender (address)： 消息发送方（当前调用）\n\nmsg.sig (bytes4)： 调用数据的前四个字节（即函数标识符）。\n\nmsg.value (uint)： 随消息发送的 wei 的数量\n\ntx.gasprice (uint)： 交易的燃料价格\n\ntx.origin (address)： 交易发送方（完整调用链上的原始发送方）\n    **/\n\n    \n\n}"
+			}
+		},
+		"settings": {
+			"optimizer": {
+				"enabled": false,
+				"runs": 200
+			},
+			"outputSelection": {
+				"*": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"metadata",
+						"devdoc",
+						"userdoc",
+						"storageLayout",
+						"evm.legacyAssembly",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"evm.gasEstimates",
+						"evm.assembly"
+					]
+				}
+			},
+			"remappings": []
+		}
+	},
+	"output": {
+		"contracts": {
+			"contracts/22_SpecialFun.sol": {
+				"SpecialFun": {
+					"abi": [],
+					"devdoc": {
+						"kind": "dev",
+						"methods": {},
+						"version": 1
+					},
+					"evm": {
+						"assembly": "    /* \"contracts/22_SpecialFun.sol\":66:1654  contract SpecialFun {... */\n  mstore(0x40, 0x80)\n  callvalue\n  dup1\n  iszero\n  tag_1\n  jumpi\n  0x00\n  dup1\n  revert\ntag_1:\n  pop\n  dataSize(sub_0)\n  dup1\n  dataOffset(sub_0)\n  0x00\n  codecopy\n  0x00\n  return\nstop\n\nsub_0: assembly {\n        /* \"contracts/22_SpecialFun.sol\":66:1654  contract SpecialFun {... */\n      mstore(0x40, 0x80)\n      0x00\n      dup1\n      revert\n\n    auxdata: 0xa2646970667358221220cca6c97744140f31c0942343745e1225343ea1023b6ce8045dd39870eccbf0da64736f6c634300081a0033\n}\n",
+						"bytecode": {
+							"functionDebugData": {},
+							"generatedSources": [],
+							"linkReferences": {},
+							"object": "6080604052348015600e575f80fd5b50603e80601a5f395ff3fe60806040525f80fdfea2646970667358221220cca6c97744140f31c0942343745e1225343ea1023b6ce8045dd39870eccbf0da64736f6c634300081a0033",
+							"opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE CALLVALUE DUP1 ISZERO PUSH1 0xE JUMPI PUSH0 DUP1 REVERT JUMPDEST POP PUSH1 0x3E DUP1 PUSH1 0x1A PUSH0 CODECOPY PUSH0 RETURN INVALID PUSH1 0x80 PUSH1 0x40 MSTORE PUSH0 DUP1 REVERT INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 0xCC 0xA6 0xC9 PUSH24 0x44140F31C0942343745E1225343EA1023B6CE8045DD39870 0xEC 0xCB CREATE 0xDA PUSH5 0x736F6C6343 STOP ADDMOD BYTE STOP CALLER ",
+							"sourceMap": "66:1588:0:-:0;;;;;;;;;;;;;;;;;;;"
+						},
+						"deployedBytecode": {
+							"functionDebugData": {},
+							"generatedSources": [],
+							"immutableReferences": {},
+							"linkReferences": {},
+							"object": "60806040525f80fdfea2646970667358221220cca6c97744140f31c0942343745e1225343ea1023b6ce8045dd39870eccbf0da64736f6c634300081a0033",
+							"opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE PUSH0 DUP1 REVERT INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 0xCC 0xA6 0xC9 PUSH24 0x44140F31C0942343745E1225343EA1023B6CE8045DD39870 0xEC 0xCB CREATE 0xDA PUSH5 0x736F6C6343 STOP ADDMOD BYTE STOP CALLER ",
+							"sourceMap": "66:1588:0:-:0;;;;;"
+						},
+						"gasEstimates": {
+							"creation": {
+								"codeDepositCost": "12400",
+								"executionCost": "64",
+								"totalCost": "12464"
+							}
+						},
+						"legacyAssembly": {
+							".code": [
+								{
+									"begin": 66,
+									"end": 1654,
+									"name": "PUSH",
+									"source": 0,
+									"value": "80"
+								},
+								{
+									"begin": 66,
+									"end": 1654,
+									"name": "PUSH",
+									"source": 0,
+									"value": "40"
+								},
+								{
+									"begin": 66,
+									"end": 1654,
+									"name": "MSTORE",
+									"source": 0
+								},
+								{
+									"begin": 66,
+									"end": 1654,
+									"name": "CALLVALUE",
+									"source": 0
+								},
+								{
+									"begin": 66,
+									"end": 1654,
+									"name": "DUP1",
+									"source": 0
+								},
+								{
+									"begin": 66,
+									"end": 1654,
+									"name": "ISZERO",
+									"source": 0
+								},
+								{
+									"begin": 66,
+									"end": 1654,
+									"name": "PUSH [tag]",
+									"source": 0,
+									"value": "1"
+								},
+								{
+									"begin": 66,
+									"end": 1654,
+									"name": "JUMPI",
+									"source": 0
+								},
+								{
+									"begin": 66,
+									"end": 1654,
+									"name": "PUSH",
+									"source": 0,
+									"value": "0"
+								},
+								{
+									"begin": 66,
+									"end": 1654,
+									"name": "DUP1",
+									"source": 0
+								},
+								{
+									"begin": 66,
+									"end": 1654,
+									"name": "REVERT",
+									"source": 0
+								},
+								{
+									"begin": 66,
+									"end": 1654,
+									"name": "tag",
+									"source": 0,
+									"value": "1"
+								},
+								{
+									"begin": 66,
+									"end": 1654,
+									"name": "JUMPDEST",
+									"source": 0
+								},
+								{
+									"begin": 66,
+									"end": 1654,
+									"name": "POP",
+									"source": 0
+								},
+								{
+									"begin": 66,
+									"end": 1654,
+									"name": "PUSH #[$]",
+									"source": 0,
+									"value": "0000000000000000000000000000000000000000000000000000000000000000"
+								},
+								{
+									"begin": 66,
+									"end": 1654,
+									"name": "DUP1",
+									"source": 0
+								},
+								{
+									"begin": 66,
+									"end": 1654,
+									"name": "PUSH [$]",
+									"source": 0,
+									"value": "0000000000000000000000000000000000000000000000000000000000000000"
+								},
+								{
+									"begin": 66,
+									"end": 1654,
+									"name": "PUSH",
+									"source": 0,
+									"value": "0"
+								},
+								{
+									"begin": 66,
+									"end": 1654,
+									"name": "CODECOPY",
+									"source": 0
+								},
+								{
+									"begin": 66,
+									"end": 1654,
+									"name": "PUSH",
+									"source": 0,
+									"value": "0"
+								},
+								{
+									"begin": 66,
+									"end": 1654,
+									"name": "RETURN",
+									"source": 0
+								}
+							],
+							".data": {
+								"0": {
+									".auxdata": "a2646970667358221220cca6c97744140f31c0942343745e1225343ea1023b6ce8045dd39870eccbf0da64736f6c634300081a0033",
+									".code": [
+										{
+											"begin": 66,
+											"end": 1654,
+											"name": "PUSH",
+											"source": 0,
+											"value": "80"
+										},
+										{
+											"begin": 66,
+											"end": 1654,
+											"name": "PUSH",
+											"source": 0,
+											"value": "40"
+										},
+										{
+											"begin": 66,
+											"end": 1654,
+											"name": "MSTORE",
+											"source": 0
+										},
+										{
+											"begin": 66,
+											"end": 1654,
+											"name": "PUSH",
+											"source": 0,
+											"value": "0"
+										},
+										{
+											"begin": 66,
+											"end": 1654,
+											"name": "DUP1",
+											"source": 0
+										},
+										{
+											"begin": 66,
+											"end": 1654,
+											"name": "REVERT",
+											"source": 0
+										}
+									]
+								}
+							},
+							"sourceList": [
+								"contracts/22_SpecialFun.sol",
+								"#utility.yul"
+							]
+						},
+						"methodIdentifiers": {}
+					},
+					"metadata": "{\"compiler\":{\"version\":\"0.8.26+commit.8a97fa7a\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/22_SpecialFun.sol\":\"SpecialFun\"},\"evmVersion\":\"cancun\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"contracts/22_SpecialFun.sol\":{\"keccak256\":\"0x0817ff1142472f22ff1aeadea7f4cc798591042d50957c076f290af246d3c665\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://5813e149f6f025fe1b65d2f25c9bf75f50194adbc96dc3a7c7d172f95de207ff\",\"dweb:/ipfs/QmSENqziJuCDs9CtX5SguY4TxFN2NY968XFdKddnaYJh2b\"]}},\"version\":1}",
+					"storageLayout": {
+						"storage": [],
+						"types": null
+					},
+					"userdoc": {
+						"kind": "user",
+						"methods": {},
+						"version": 1
+					}
+				}
+			}
+		},
+		"sources": {
+			"contracts/22_SpecialFun.sol": {
+				"ast": {
+					"absolutePath": "contracts/22_SpecialFun.sol",
+					"exportedSymbols": {
+						"SpecialFun": [
+							2
+						]
+					},
+					"id": 3,
+					"license": "MIT",
+					"nodeType": "SourceUnit",
+					"nodes": [
+						{
+							"id": 1,
+							"literals": [
+								"solidity",
+								">=",
+								"0.8",
+								".4",
+								"<",
+								"0.9",
+								".0"
+							],
+							"nodeType": "PragmaDirective",
+							"src": "32:32:0"
+						},
+						{
+							"abstract": false,
+							"baseContracts": [],
+							"canonicalName": "SpecialFun",
+							"contractDependencies": [],
+							"contractKind": "contract",
+							"fullyImplemented": true,
+							"id": 2,
+							"linearizedBaseContracts": [
+								2
+							],
+							"name": "SpecialFun",
+							"nameLocation": "75:10:0",
+							"nodeType": "ContractDefinition",
+							"nodes": [],
+							"scope": 3,
+							"src": "66:1588:0",
+							"usedErrors": [],
+							"usedEvents": []
+						}
+					],
+					"src": "32:1622:0"
+				},
+				"id": 0
+			}
+		}
+	}
+}

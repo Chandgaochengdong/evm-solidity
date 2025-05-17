@@ -1,0 +1,59 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "info",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "payable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/23_InfoFeed.sol": "InfoFeed"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/23_InfoFeed.sol": {
+			"keccak256": "0x2fb65098a6efbf7486932189b2db016c5ccd298d4daa03cea9d1ce6d44c8b468",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://e91dbd20e73d4eb826574295e5203e503783c9d61df22cdeaa98881fc8c28645",
+				"dweb:/ipfs/QmadaTiuRUdikGw7dBbGLoCHS4GNH9kXx4Vrrv2WxR7FS4"
+			]
+		}
+	},
+	"version": 1
+}
