@@ -24,10 +24,6 @@ contract FeedConsumer {
             // 错误代码可以用来确定错误的种类。
             errorCount++;
             return (0, false);
-        } catch (bytes memory  /*lowLevelData*/) {
-            // 在使用revert()的情况下，会执行这个命令。
-            errorCount++;
-            return (0, false);
-        }
+        } 
     }
 }    

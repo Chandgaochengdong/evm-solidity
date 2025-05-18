@@ -1,0 +1,51 @@
+{
+	"compiler": {
+		"version": "0.8.30+commit.73712a01"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/contract/Destructible.sol": "Owned"
+		},
+		"evmVersion": "prague",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/contract/Destructible.sol": {
+			"keccak256": "0xab4ac6beaa5ce6bf61af5481d780ecc035582c01f3d86dc7ba6a3ee4828d4da5",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://16275b1aa1e0b574c8ff5e6214c97c0876effa5d794d566b7c007777ec547c51",
+				"dweb:/ipfs/Qmd6uNFM5gyGJHHAaUqAGbJ8CRZ5ZYUYZzNxy41pJsb8Tv"
+			]
+		}
+	},
+	"version": 1
+}
